@@ -17,7 +17,7 @@ The qutrit-universality calculation studies a pair of three-level gates, the qut
 
 ### 2. GRAPE-based quantum gate synthesis
 
-The two GRAPE scripts optimize control pulses for two target qutrit gates: the Fourier gate \(H_3\) and the diagonal gate \(T_3\). The controlled system is the three-level electronic spin of an NV centre. Each transition is driven through two quadratures, giving four piecewise-constant control channels: \(X_+\), \(Y_+\), \(X_-\), and \(Y_-\).
+The two GRAPE scripts optimize control pulses for two target qutrit gates: the Fourier gate \(H_3\) and the diagonal gate \(T_3\). The controlled system is the three-level electronic spin of an NV centre.Each transition is driven through two quadratures, giving four piecewise-constant control channels: (X_+), (Y_+), (X_-), and (Y_-).
 
 The implementation includes:
 

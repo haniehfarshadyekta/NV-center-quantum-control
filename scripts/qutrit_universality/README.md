@@ -83,8 +83,6 @@ Using $\xi+\xi^{-1}=2\cos(2\pi/9)$, this becomes
 The trace is real. Consequently, the eigenvalues of $R$ can be written as
 
 ```math
-\operatorname{spec}(R)
-=
 \{1,e^{i\theta},e^{-i\theta}\}.
 ```
 
@@ -152,7 +150,7 @@ y\in
 
 None of these values satisfies the polynomial. Therefore, $y$ is irrational.
 
-Furthermore, the polynomial $3y^3-3y-1$ is irreducible over $\mathbb{Q}$ and its monic normalization has a non-integer coefficient. Thus, $y$ is not an algebraic integer.
+Furthermore, the polynomial $3y^3-3y-1$ is irreducible over $\mathbb{Q}$, and its monic normalization has a non-integer coefficient. Thus, $y$ is not an algebraic integer.
 
 If $e^{i\theta}$ were a root of unity, then both $e^{i\theta}$ and $e^{-i\theta}$ would be algebraic integers. Their sum,
 
@@ -231,7 +229,7 @@ The next step is to determine whether these generators and their nested commutat
 
 The script `lie_algebra_closure.py` performs this calculation using SymPy.
 
-### Cyclotomic reduction
+### Cyclotomic Reduction
 
 All expressions are represented in terms of the ninth root of unity $\xi$.
 
@@ -261,9 +259,9 @@ Complex conjugation is handled exactly using
 
 This avoids floating-point approximations in the symbolic calculations.
 
-### Construction of the Lie-algebra basis
+### Construction of the Lie-Algebra Basis
 
-The matrices $H_3$, $T_3$, their adjoints, and the auxiliary matrices $R$ and $S$ are constructed symbolically.
+The matrices $H_3$ and $T_3$, their adjoints, and the auxiliary matrices $R$ and $S$ are constructed symbolically.
 
 The implementation then defines the anti-Hermitian parts
 
@@ -299,11 +297,13 @@ L_8&=[L_4,B].
 
 All eight matrices are traceless and belong to $\mathfrak{su}(3)$.
 
-### Exact linear-independence test
+### Exact Linear-Independence Test
 
 Each $3\times3$ matrix is vectorized using its first eight row-major entries.
 
 The final diagonal entry is omitted because the matrices are traceless and this entry is determined by the other two diagonal entries.
+
+Let $c(L_j)$ denote the column vector consisting of these eight entries for the matrix $L_j$.
 
 The resulting vectors are assembled as columns of an $8\times8$ matrix:
 
@@ -311,10 +311,7 @@ The resulting vectors are assembled as columns of an $8\times8$ matrix:
 M=
 \begin{pmatrix}
 |&|&&|\\
-\operatorname{vec}(L_1)&
-\operatorname{vec}(L_2)&
-\cdots&
-\operatorname{vec}(L_8)\\
+c(L_1)&c(L_2)&\cdots&c(L_8)\\
 |&|&&|
 \end{pmatrix}.
 ```
@@ -341,6 +338,13 @@ In particular, for every $U\in\mathrm{SU}(3)$ and every $\varepsilon>0$, there e
 
 ```math
 \|U-W\|<\varepsilon.
+```
+
+The norm may be taken to be the Frobenius norm:
+
+```math
+\|A\|_F=
+\sqrt{\mathrm{Tr}(A^\dagger A)}.
 ```
 
 Since $R$ and $S$ are constructed from $H_3$, $T_3$, and their adjoints, the original gate set inherits this universality up to a global phase.
@@ -403,4 +407,3 @@ pip install sympy
 This implementation addresses the symbolic Lie-algebra verification associated with qutrit-gate universality.
 
 It does not perform pulse optimization or simulate the physical implementation of the gates. The GRAPE-based implementations for the Fourier and diagonal qutrit gates are maintained separately in `scripts/grape/`.
-

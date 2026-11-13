@@ -1,0 +1,30 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Generated data and outputs
+results/
+outputs/
+figures/generated/
+*.log
+*.prof
+
+# Research manuscripts and non-code files: review individually before sharing
+*.pdf
+*.docx
+*.pptx
+*.zip
+
+# Machine-specific settings
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

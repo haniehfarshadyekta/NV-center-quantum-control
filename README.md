@@ -37,9 +37,9 @@ For each control configuration, the code generates nested commutators of the dri
 
 The four scripts compare:
 
-- zero magnetic field with electronic \(S_x\) and \(S_y\) controls;
-- zero magnetic field with electronic $S_x$ and nuclear \(I_x\) controls;
-- a finite longitudinal magnetic field with electronic \(S_x\) control, including the nuclear Zeeman term;
+- zero magnetic field with electronic $S_x$ and $S_y$ controls;
+- zero magnetic field with electronic $S_x$ and nuclear $I_x$ controls;
+- a finite longitudinal magnetic field with electronic $S_x$ control, including the nuclear Zeeman term;
 - the same finite-field control configuration with the nuclear Zeeman term neglected.
 
 ## Repository structure

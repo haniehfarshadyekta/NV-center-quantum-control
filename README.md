@@ -29,7 +29,7 @@ The implementation includes:
 
 The initial control pulses are generated randomly and smoothed before optimization. No fixed random seed is set in the current scripts, so separate runs may follow different optimization trajectories.
 
-### 3. Lie-algebraic controllability of the coupled NV–\(^{14}\mathrm{N}\) system
+### 3. Lie-algebraic controllability of the coupled NV–¹⁴N system
 
 The controllability scripts model the NV electronic spin and the nitrogen-14 nuclear spin as two spin-1 subsystems. Their tensor-product Hilbert space has dimension nine. The drift Hamiltonian includes the electronic zero-field splitting, nuclear quadrupole term, and transverse and longitudinal hyperfine couplings. The finite-field scripts additionally include longitudinal Zeeman terms.
 

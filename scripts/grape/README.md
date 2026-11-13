@@ -14,23 +14,24 @@ Both implementations use four piecewise-constant control channels corresponding 
 
 ## Physical Model
 
-The controlled system is described in a rotating frame, with the rotating-wave approximation (RWA).
+The controlled system is described in a rotating frame, using the rotating-wave approximation (RWA).
 
 The drift Hamiltonian is
 
 $$
-H_0 = 2\pi\left[
-(D-\omega_{\mathrm{rf}})S_z^2
+H_0 = 2\pi \times 10^9
+\left[
+(D-\nu_{\mathrm{rf}})S_z^2
 +\gamma_e B S_z
 \right],
 $$
 
 where:
 
-- $D$ is the zero-field splitting.
-- $\omega_{\mathrm{rf}}$ is the carrier frequency.
-- $\gamma_e$ is the electronic gyromagnetic ratio.
-- $B$ is the applied magnetic field.
+- $D$ is the zero-field splitting, expressed in GHz.
+- $\nu_{\mathrm{rf}}$ is the carrier frequency, expressed in GHz.
+- $\gamma_e$ is the electronic gyromagnetic ratio, expressed in GHz/T.
+- $B$ is the applied magnetic field, expressed in Tesla.
 - $S_z$ is the spin-1 $z$-component operator.
 
 The control Hamiltonian is
@@ -65,8 +66,11 @@ The objective function is the gate fidelity
 
 $$
 F=\frac{1}{9}
-\left|\operatorname{Tr}
-\left(U_{\mathrm{target}}^\dagger U(T)\right)
+\left|
+\mathrm{Tr}
+\left(
+U_{\mathrm{target}}^\dagger U(T)
+\right)
 \right|^2.
 $$
 
@@ -117,19 +121,21 @@ python scripts/grape/t_gate.py
 
 ## Implementation Notes
 
-The two scripts use independent random initial pulses. No fixed random seed is specified in the current implementations, so separate executions may produce different optimization trajectories.
+The two scripts use independently generated random initial pulses. No fixed random seed is specified in the current implementations, so separate executions may produce different optimization trajectories.
 
 The final output includes the achieved gate fidelity and a numerical check of the unitarity of the resulting propagator.
+
+The current implementation uses a target fidelity threshold of $0.999$.
 
 ## Dependencies
 
 - NumPy
 - SciPy
 
-Install the required packages from the repository root:
+Install the required packages using:
 
 ```bash
-pip install -r requirements.txt
+pip install numpy scipy
 ```
 
 ## Future Development

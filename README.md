@@ -13,7 +13,7 @@ This repository contains Python implementations developed as part of an ongoing 
 
 ### 1. Qutrit-gate universality
 
-The qutrit-universality calculation studies a pair of three-level gates, the qutrit Fourier transform \(H_3\) and a diagonal gate \(T_3\). From these gates, the code constructs auxiliary group elements and forms matrices from their anti-Hermitian parts and nested commutators. SymPy is used to carry out the algebra in exact arithmetic, reducing expressions modulo the cyclotomic relation for a ninth root of unity. The script then evaluates an exact determinant to test the linear independence of eight candidate traceless matrices. This calculation supports the Lie-algebraic part of the universality analysis.
+The qutrit-universality calculation studies a pair of three-level gates, the qutrit Fourier transform $H_3$ and a diagonal gate $T_3$. From these gates, the code constructs auxiliary group elements and forms matrices from their anti-Hermitian parts and nested commutators. SymPy is used to carry out the algebra in exact arithmetic, reducing expressions modulo the cyclotomic relation for a ninth root of unity. The script then evaluates an exact determinant to test the linear independence of eight candidate traceless matrices. This calculation supports the Lie-algebraic part of the universality analysis.
 
 ### 2. GRAPE-based quantum gate synthesis
 

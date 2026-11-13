@@ -72,10 +72,10 @@ NV-center-quantum-control/
 |---|---|
 | `scripts/qutrit_universality/lie_algebra_closure.py` | Exact symbolic construction of qutrit group elements and a determinant-based linear-independence check for nested-commutator matrices. |
 | `scripts/grape/fourier_gate.py` | GRAPE optimization with the qutrit Fourier transform as the target gate. |
-| `scripts/grape/t_gate.py` | GRAPE optimization with the diagonal qutrit \(T_3\) gate as the target. |
-| `scripts/nv14_controllability/zero_field_electron_xy.py` | Coupled NV–\(^{14}\mathrm{N}\) system at zero field with electronic \(S_x,S_y\) controls. |
-| `scripts/nv14_controllability/zero_field_electron_x_nuclear_x.py` | Coupled system at zero field with electronic \(S_x\) and nuclear \(I_x\) controls. |
-| `scripts/nv14_controllability/field_electron_x.py` | Finite longitudinal field, electronic \(S_x\) control, and both electronic and nuclear Zeeman terms. |
+| `scripts/grape/t_gate.py` | GRAPE optimization with the diagonal qutrit $T_3$ gate as the target. |
+| `scripts/nv14_controllability/zero_field_electron_xy.py` | Coupled NV–\(^{14}\mathrm{N}\) system at zero field with electronic $S_x$,$S_y$ controls. |
+| `scripts/nv14_controllability/zero_field_electron_x_nuclear_x.py` | Coupled system at zero field with electronic $S_x$ and nuclear $I_x$ controls. |
+| `scripts/nv14_controllability/field_electron_x.py` | Finite longitudinal field, electronic $S_x$ control, and both electronic and nuclear Zeeman terms. |
 | `scripts/nv14_controllability/field_electron_x_no_nuclear_zeeman.py` | Same finite-field configuration with the nuclear Zeeman contribution set to zero. |
 
 ## Installation

@@ -127,6 +127,3 @@ The GRAPE scripts perform iterative numerical optimizations and may take longer 
 
 A planned extension is to incorporate environmental effects into the GRAPE optimization by evolving density matrices with a Lindblad master equation. This would allow relaxation and dephasing to be included directly in the pulse optimization. **No Lindblad-based OQS implementation is included yet.**
 
-## Research and sharing
-
-This repository documents ongoing supervised undergraduate research. Please consult the supervisor before making the repository public or distributing code and results beyond the intended application context. No open-source licence has been selected.

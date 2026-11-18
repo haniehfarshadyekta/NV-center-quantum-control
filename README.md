@@ -13,7 +13,7 @@ This repository contains Python implementations developed as part of an ongoing 
 
 ### 1. Qutrit-gate universality
 
-The qutrit-universality calculation studies a pair of three-level gates, the qutrit Fourier transform $H_3$ and a diagonal gate $T_3$. From these gates, the code constructs auxiliary group elements and forms matrices from their anti-Hermitian parts and nested commutators. SymPy is used to carry out the algebra in exact arithmetic, reducing expressions modulo the cyclotomic relation for a ninth root of unity. The script then evaluates an exact determinant to test the linear independence of eight candidate traceless matrices. This calculation supports the Lie-algebraic part of the universality analysis.
+The qutrit-gate analysis studies the qutrit Fourier transform $H_3$ and the diagonal gate $T_3$. Amaro-Alcalá, Sanders, and de Guise (2024, Eq. (2)) use these same gate matrices and identify the generated set as a universal qutrit gate set. The present repository investigates the pair independently: it constructs auxiliary group elements and uses SymPy to test, in exact arithmetic, the linear independence of eight candidate traceless matrices obtained from their anti-Hermitian parts and nested commutators. This verifies the Lie-algebra-generation calculation; it is not presented here as a completed independent proof of density of the discrete generated group. Applying a group-level universality criterion, such as the adjoint-representation and commutant criteria discussed by Sawicki and Karnas (2017), remains part of the ongoing analysis.
 
 ### 2. GRAPE-based quantum gate synthesis
 
@@ -121,6 +121,11 @@ The GRAPE scripts perform iterative numerical optimizations and may take longer 
 - The parameter values and units are defined in the individual scripts. Check them before adapting the model to a different sample or experimental configuration.
 - The scripts currently run as standalone files; they have not yet been refactored into a shared Python package or accompanied by a formal automated test suite.
 - Before treating numerical outputs as final research results, validate the Hamiltonian conventions and units, check matrix properties, and compare analytical GRAPE gradients with finite-difference estimates.
+
+## References
+
+- D. Amaro-Alcalá, B. C. Sanders, and H. de Guise, “Benchmarking of universal qutrit gates,” *Physical Review A* **109**, 012621 (2024). [https://doi.org/10.1103/PhysRevA.109.012621](https://doi.org/10.1103/PhysRevA.109.012621). The paper uses the same qutrit Fourier and diagonal $T$ matrices as this project and identifies their generated set as universal.
+- A. Sawicki and K. Karnas, “Universality of Single-Qudit Gates,” *Annales Henri Poincaré* **18**, 3515–3552 (2017). [https://doi.org/10.1007/s00023-017-0604-z](https://doi.org/10.1007/s00023-017-0604-z). This work provides group-level universality criteria based on adjoint representations and their commutants; applying these criteria to the present gate pair remains ongoing.
 
 ## Planned development
 

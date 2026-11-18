@@ -202,6 +202,7 @@ Its dimension is
 ```
 
 This result demonstrates how the symmetry of the Hamiltonian restricts the generated dynamical Lie algebra.
+However, the agreement in dimension alone is not sufficient to establish this decomposition. A rigorous identification would require a further analysis of the algebraic structure, including its invariant subspaces and ideals. The decomposition is therefore presented as a possible interpretation of the numerical result rather than a proven characterization.
 
 ### 3. Finite Magnetic Field — Electronic $S_x$ Control
 
